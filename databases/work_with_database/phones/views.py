@@ -47,3 +47,4 @@ def list_phones(request):
     phone_objects = Phone.objects.all()
     phones = [f'{c.id}: {c.name}, {c.price} date: {c.release_date} | {c.lte_exists} {c.slug}' for c in phone_objects]
     return HttpResponse('<br>'.join(phones))
+
